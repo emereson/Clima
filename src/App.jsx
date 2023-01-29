@@ -46,7 +46,14 @@ useEffect(() => {
     <div className="App">
       {
         isLoading ?
-        <h1>Loading...</h1>
+        <nav class="loader">
+        <div class="preLoader">
+            <samp class="loading">Loading ...</samp>
+            <div class="ring"></div>
+            <div class="ring"></div>
+            <div class="ring"></div>
+        </div>
+    </nav> 
         :
       <WeatherCard 
       weather={weather}

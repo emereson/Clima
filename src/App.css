@@ -1,3 +1,82 @@
+.loader{
+    background-color: #000000;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    z-index: 9999;
+    transition: all 1.5s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.preLoader{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.loading{
+    font-size: 40px;
+    color: white;
+    font-weight: 1000;
+}
+.ring{
+    width: 300px;
+    height: 300px;
+    border: 0px solid  black;
+    border-radius: 50%;
+    position: absolute;
+}
+.ring:nth-child(2){
+    border-bottom-width: 8px;
+    border-color: rgb(255, 255, 255);
+    animation: rotate1 2s linear infinite;
+    box-shadow: rgb(121, 120, 123)1px 1px 1px 1px;
+}
+.ring:nth-child(3){
+    border-bottom-width: 8px;
+    border-color: rgb(79, 93, 90);
+    animation: rotate2 2s linear infinite;
+    box-shadow: rgb(129, 223, 204) 1px 1px 1px 1px;
+}
+.ring:nth-child(4){
+    border-bottom-width: 8px;
+    border-color: rgb(62, 62, 62);
+    animation: rotate3 2s linear infinite;
+    box-shadow: rgb(255, 255, 255) 1px 1px 1px 1px;
+}
+.loaderIcon{
+    color: violet;
+    font-size: 20px;
+    height: 100px;
+    width: 100px;
+}
+
+@keyframes rotate1{
+    0%{
+        transform: rotateX(35deg) rotateY(-45deg) rotateZ(0deg);
+    }
+    100%{
+        transform: rotateX(35deg) rotateY(-45deg) rotateZ(360deg);
+    }
+}@keyframes rotate2{
+    0%{
+        transform: rotateX(-50deg) rotateY(10deg) rotateZ(0deg);
+    }
+    100%{
+        transform: rotateX(-50deg) rotateY(10deg) rotateZ(360deg);
+    }
+}
+@keyframes rotate3{
+    0%{
+        transform: rotateX(35deg) rotateY(55deg) rotateZ(0deg);
+    }
+    100%{
+        transform: rotateX(35deg) rotateY(55deg) rotateZ(360deg);
+    }
+}
+
+
 .App{
     width: 100%;
     min-height: 100vh;
